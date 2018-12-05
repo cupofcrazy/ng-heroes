@@ -1,0 +1,24 @@
+.menu {
+    cursor: pointer;
+}
+
+.menu.open .circle {
+    background: blue;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    width: 20px;
+    height: 2px;
+    margin: 2px 0 2px 0;
+    background: #111;
+}

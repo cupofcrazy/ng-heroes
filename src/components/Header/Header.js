@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Menu from '../Menu/Menu'
 import './Header.css'
 
 class Header extends Component {
@@ -8,7 +9,7 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                
+                <Menu />
             </div>
         );
     }
