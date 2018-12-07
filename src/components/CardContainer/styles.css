@@ -1,0 +1,52 @@
+.wrapper {
+    width: 100%;
+}
+
+ul {
+    
+}
+
+.container {
+    margin: 8em 0 5em 0;
+}
+
+.carousel {
+    overflow: hidden;
+    outline: none;
+    cursor: -webkit-grab;
+    user-select: none;
+}
+
+.carousel-cell {
+    opacity: .3;
+}
+
+.is-selected .title {
+    color: #FFF;
+    -webkit-text-stroke: 0px;
+    /* transform: rotate(-10deg) */
+}
+
+ul li {
+    list-style-type: none;
+    display: block;
+    float: left;
+}
+#prog {
+    /* margin: 20px; */
+    width: 100%;
+    background: #323232;
+}
+.progress-bar {
+   
+    width: 0;
+    height: 1px;
+    background: #FFF;
+}
+
+.drag-explore {
+    color: #FFF;
+    padding: 3em 2em;
+    font-family: CircularStd-Medium, sans-serif;
+    font-size: 20px;
+}

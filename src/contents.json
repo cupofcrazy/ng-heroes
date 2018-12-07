@@ -1,0 +1,81 @@
+[
+    {
+        "name": "Obafemi Awolowo",
+        "role": "Visual Designer",
+        "gender": "male",
+        "years": 14
+    },
+    {
+        "name": "Funmilayo Ransom Kuti",
+        "role": "Designer",
+        "gender": "male",
+        "years": 16
+    },
+    {
+        "name": "Muritala Mohammed",
+        "role": "Visual Designer",
+        "gender": "male",
+        "years": 10
+    },
+    {
+        "name": "Kudirat Abiola",
+        "role": "Designer",
+        "gender": "male",
+        "years": 20
+    },
+    {
+        "name": "Sir Ahmadu Bello",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Herbert Macaulay",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Magaret Ekpo",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Hajiya Gambo Sawaba",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Chief Anthony Enahoro",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Taiwo Akinwunmi",
+        "role": "Designer",
+        "gender": "male",
+        "years": 20
+    },
+    {
+        "name": "Chinua Achebe",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Fela Anikulapo Kuti",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    },
+    {
+        "name": "Alhaji Abdulsalami Abubakar",
+        "role": "Web Designer",
+        "gender": "female",
+        "years": 13
+    }
+
+]

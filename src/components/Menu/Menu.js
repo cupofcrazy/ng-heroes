@@ -17,7 +17,14 @@ class Menu extends Component {
     }
     toggleMenu = () => {
         const { menuBar } = this.refs;
+        const { isOpen  } = this.state;
+
+        console.log({ menuBar, isOpen })
+
         if (menuBar.classList.contains('open')) {
+            this.setState({
+                isOpen: false
+            })
             menuBar.classList.remove('open')
         } else {
             this.setState({
@@ -25,8 +32,6 @@ class Menu extends Component {
             })
             menuBar.classList.add('open')
         }
-
-        console.log(menuBar)
     }
     render() {
         return (

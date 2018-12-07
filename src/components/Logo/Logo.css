@@ -1,0 +1,8 @@
+.logo {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: Monument, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(-10deg);
+}

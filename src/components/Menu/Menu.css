@@ -2,13 +2,28 @@
     cursor: pointer;
 }
 
+.menu:hover .circle {
+    background: #DDD;
+    transition: transform .5s ease;
+}
+
+.menu:hover .bar:nth-of-type(1) {
+    transform: translateX(3px);
+    transition: transform .3s ease;
+}
+
+.menu:hover .bar:nth-of-type(3) {
+    transform: translateX(-3px);
+    transition: transform .3s ease;
+}
+
 .menu.open .circle {
     background: blue;
 }
 
 .circle {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: #FFFFFF;
     border-radius: 50%;
     display: flex;
@@ -17,8 +32,9 @@
 }
 
 .bar {
-    width: 20px;
+    width: 15px;
     height: 2px;
     margin: 2px 0 2px 0;
     background: #111;
+    transition: transform .5s ease;
 }
