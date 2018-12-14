@@ -11,7 +11,10 @@ class Card extends Component {
         }
     }
     componentDidMount() {
-        // const interact = new Interact(this.refs.card);
+        const interact = new Interact({
+            elem: this.refs.title,
+            image: this.refs.heroImage
+        });
     }
     render() {
         let { name, role, years } = this.props.user;
@@ -21,7 +24,7 @@ class Card extends Component {
             <div className="card">
                 <div className="mask">
                     
-                    <div className="title">
+                    <div className="title" ref="title">
                         { name.map((char, id) => {
                             return (
                                 <div className="mask"  key={id}>
@@ -34,6 +37,7 @@ class Card extends Component {
                 {/* <div className="role">{ role }</div> */}
                 <div className="id">{formatNumber(this.props.counter+1)}</div>
                 {/* <div className="years">{ years }</div> */}
+                <div className="hero_image" ref="heroImage"></div>
             </div>
             </li>
         );

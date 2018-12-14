@@ -7,7 +7,7 @@ import Card from '../Card/Card.js';
 
 class CardContainer extends Component {
     state = {
-        contents:contents,
+        contents: contents,
         mouseDown: false
     }
     mouseDown = (e) => {

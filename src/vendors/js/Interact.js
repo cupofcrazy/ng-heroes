@@ -4,67 +4,68 @@ import TweenMax, { Expo } from 'gsap'
  * @param {DOMNode} el Background HTML Element
  */
 class Interact {
-    constructor(el) {
-        this.DOM = {
-            el: el
-        }
-        this.init()
+    constructor({ elem, image }) {
+        this.DOM = { elem, image }
+        this.initEvents()
     }
-    init() {
-        this.DOM.el.addEventListener('mousemove', e => this.mouseMove(e))
-        this.DOM.el.addEventListener('mouseout', e => this.mouseOut(e))
+    initEvents() {
+        this.DOM.elem.addEventListener('mousemove', e => this.mouseMove(e))
+        this.DOM.elem.addEventListener('mouseout', e => this.mouseOut(e))
     }
     get offset() {
-        const top = this.DOM.el.offsetTop;
-        const left = this.DOM.el.offsetLeft;
+        const rect = this.DOM.elem.getBoundingClientRect()
+        const top = rect.top;
+        const left = rect.left;
 
         return { top, left }
     }
     getMousePos(e) {
-        const x = e.clientX;
-        const y = e.clientY;
+        const x = e.pageX;
+        const y = e.pageY;
         
         return { x, y }
     }
     get rect() {
-        const width = this.DOM.el.offsetWidth;
-        const height = this.DOM.el.offsetHeight;
+        const rect = this.DOM.elem.getBoundingClientRect()
+        const width = rect.width;
+        const height = rect.height;
 
         return { width, height }
     }
     mouseMove(e) {
         // Mouse position [x, y]
-        const x = this.getMousePos(e).x;
-        const y = this.getMousePos(e).y;
+        const { x, y } = this.getMousePos(e);
 
         // Background [width, height]
-        const W = this.rect.width;
-        const H = this.rect.height;
+        const { width, height } = this.rect;
 
         // Background offset [top, left]
-        const offset = this.offset;
-        const left = offset.left;
-        const top = offset.top;
+        const { top, left } = this.offset;
 
         // Background mid-point [x, y]
-        const midX = x - left - Math.floor((W / 2));
-        const midY = y - top - Math.floor((H / 2));
+        const midX = (x - left) - Math.floor(( width / 2 ));
+        const midY = (y - top) - Math.floor(( height / 2 ));
 
         const opacity = Math.min(1, Math.abs(midY * 0.01));
        
+        console.log({ midX, midY })
 
         this.animate(midX, midY);
     }
     mouseOut(e) {
-        TweenMax.to(this.DOM.el, 1, {
+        TweenMax.to(this.DOM.image, .3, {
             y: 0,
-            x: 0
+            x: 0,
+            autoAlpha: 0,
+            ease: Expo.easeInOut
         })
     }
     animate(x, y) {
-        TweenMax.to(this.DOM.el, 1, {
-            y: (y) / 5,
-            x: (x)/ 5,
+        
+        TweenMax.to(this.DOM.image, .5, {
+            y: (y),
+            x: (x),
+            autoAlpha: 1,
             // skewY: -(y * 0.005),
             ease: Expo.ease
         })
