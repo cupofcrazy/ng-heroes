@@ -1,1 +1,1 @@
-export const formatNumber = (number) => number < 10 ? `0${number}` : number;
+export const formatNumber = number => number < 10 ? `0${number}` : number;

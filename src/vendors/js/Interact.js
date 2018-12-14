@@ -46,6 +46,7 @@ class Interact {
         const midX = (x - left) - Math.floor(( width / 2 ));
         const midY = (y - top) - Math.floor(( height / 2 ));
 
+        // eslint-disable-next-line
         const opacity = Math.min(1, Math.abs(midY * 0.01));
        
         console.log({ midX, midY })
@@ -57,7 +58,8 @@ class Interact {
             y: 0,
             x: 0,
             autoAlpha: 0,
-            ease: Expo.easeInOut
+            ease: Expo.easeInOut,
+            delay: 1
         })
     }
     animate(x, y) {

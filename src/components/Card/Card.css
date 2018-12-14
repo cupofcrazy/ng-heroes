@@ -2,6 +2,9 @@
     margin: 0 100px;
     padding: 1em;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -9,7 +12,7 @@
 .card .id {
     color: #FFFFFF;
     position: absolute;
-    top: 1em;
+    top: 0em;
     left: 7em;
     font-family: 'Monument', sans-serif;
     transform: rotate(-10deg);
@@ -17,13 +20,25 @@
 
 .title {
     font-family: 'Monument', sans-serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 4vw;
     color: transparent;
     -webkit-text-stroke: 1px #FFF;
     transform: rotate(0deg);
+    
+    /* background: red; */
 }
 
 .role, .years {
     font-family: 'CircularStd', sans-serif;
+}
+
+.hero_image {
+    width: 75px;
+    height: 100px;
+    background: blue;
+    position: absolute;
+    /* top: 0em; */
+    /* left: 30%; */
+    z-index: -1;
 }

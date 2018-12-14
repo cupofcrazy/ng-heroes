@@ -10,7 +10,7 @@ class CardContainer extends Component {
         contents: contents,
         mouseDown: false
     }
-    mouseDown = (e) => {
+    mouseDown = (e)  => {
         this.setState({
             mouseDown: true,
             skewDeg: 0
@@ -44,10 +44,11 @@ class CardContainer extends Component {
     }
     componentDidMount() {
 
-        console.log(this.state.contents);
+        // console.log(this.state.contents);
         this.initEvents()
         this.generateTimeline()
 
+        // Initialize flickity
         const flickity = new Flickity(this.refs.carousel, {
             cellAlign: 'center',
             draggable: true,
@@ -57,6 +58,8 @@ class CardContainer extends Component {
             // wrapAround: true
 
         })
+
+        // Progress bar update / scroll tween
         flickity.on('scroll', (progress) => {
             progress = Math.max(0, Math.min(1, progress))
             TweenMax.to(this.refs.progressBar, .5, {
@@ -65,6 +68,7 @@ class CardContainer extends Component {
 
         })
 
+        // Drag / Move Event
         flickity.on( 'dragMove', ( event, pointer, moveVector ) => {
             console.log(Math.floor(this.state.skewDeg));
             this.setState({
@@ -76,6 +80,7 @@ class CardContainer extends Component {
             })
         });
 
+        // Drag / Move end Event
         flickity.on( 'dragEnd', ( event, pointer, moveVector ) => {
             console.log(moveVector);
             this.setState({
@@ -96,7 +101,7 @@ class CardContainer extends Component {
                         {
                             contents.map((user, index) => {
                                 return (
-                                    <Card user={user} key={index} counter={index}/>
+                                    <Card ref="cardComponent" user={user} key={index} counter={index} id={index}/>
                                 )
                             })  
                         }
